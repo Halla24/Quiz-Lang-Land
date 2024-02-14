@@ -31,7 +31,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button onClick={handleToggleNav}>
-            <AiOutlineMenu className="text-white" size={24} />
+            <AiOutlineMenu className="text-white " size={24} />
           </button>
         </div>
 
@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="hidden space-x-4 md:flex">
           {navItems.map((item) => (
             <Link key={item.id} href={item.path}>
-              <div className="transition duration-300 cursor-pointer hover:text-gray-300">
+              <div className="transition duration-300 cursor-pointer font-mono hover:text-gray-300">
                 {item.text}
               </div>
             </Link>
