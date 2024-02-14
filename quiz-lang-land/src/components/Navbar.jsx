@@ -1,5 +1,5 @@
-// Navbar.jsx
 import React, { useState } from "react";
+import Link from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
@@ -10,9 +10,9 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { id: 1, text: "Home" },
-    { id: 2, text: "About" },
-    { id: 3, text: "Contact" },
+    { id: 1, text: "Home", path: "/" },
+    { id: 2, text: "About", path: "/about" },
+    { id: 3, text: "Contact", path: "/contact" },
   ];
 
   return (
@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo */}
         <div className="flex items-center ">
-        <img
+          <img
             src="/loog.png"
             alt="Logo"
             className="w-20 mr-8 h-30 "
@@ -38,13 +38,11 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden space-x-4 md:flex">
           {navItems.map((item) => (
-            <div
-              key={item.id}
-              className="transition duration-300 cursor-pointer hover:text-gray-300"
-              onClick={() => console.log(`Navigate to ${item.text}`)}
-            >
-              {item.text}
-            </div>
+            <Link key={item.id} href={item.path}>
+              <div className="transition duration-300 cursor-pointer hover:text-gray-300">
+                {item.text}
+              </div>
+            </Link>
           ))}
         </div>
 
@@ -52,13 +50,11 @@ const Navbar = () => {
         {navOpen && (
           <div className="absolute left-0 right-0 flex flex-col items-center py-2 bg-gray-800 bg-opacity-75 md:hidden top-16 backdrop-filter backdrop-blur-md">
             {navItems.map((item) => (
-              <div
-                key={item.id}
-                className="py-2 text-white transition duration-300 cursor-pointer hover:text-gray-300"
-                onClick={() => console.log(`Navigate to ${item.text}`)}
-              >
-                {item.text}
-              </div>
+              <Link key={item.id} href={item.path}>
+                <div className="py-2 text-white transition duration-300 cursor-pointer hover:text-gray-300">
+                  {item.text}
+                </div>
+              </Link>
             ))}
           </div>
         )}
