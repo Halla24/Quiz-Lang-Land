@@ -1,3 +1,4 @@
+// components/AnimatedText.js
 import React from 'react';
 
 const AnimatedText = () => {
@@ -18,7 +19,7 @@ const AnimatedText = () => {
         .stage {
           position: absolute;
           top: 50%;
-          left: 35%;
+          left: 40%;
           transform: translate(-50%, -50%);
           height: 300px;
           width: 500px;
@@ -67,6 +68,29 @@ const AnimatedText = () => {
         @keyframes ಠ_ಠ {
           100% {
             transform: rotateY(-20deg) rotateX(-43deg);
+          }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+          .stage {
+            height: 200px;
+            width: 350px;
+          }
+
+          .layer:after {
+            font-size: 40px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .stage {
+            height: 150px;
+            width: 250px;
+          }
+
+          .layer:after {
+            font-size: 30px;
           }
         }
       `}</style>
