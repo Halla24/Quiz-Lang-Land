@@ -7,7 +7,8 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <AnimatedText />
+      <div className="pointer-events-none">
+        <AnimatedText /></div>
       <div className="bg-cover h-screen flex items-center justify-center" style={{ backgroundImage: 'url("/hohi.avif")' }}>
           <GetStartedButton />
         </div>

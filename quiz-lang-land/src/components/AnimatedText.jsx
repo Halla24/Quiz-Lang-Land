@@ -10,6 +10,7 @@ const AnimatedText = () => {
         @import url("//fonts.googleapis.com/css?family=Kaushan+Script&text=!");
 
         body {
+          pointer-events: none;
           min-height: 450px;
           height: 100vh;
           margin: 0;
@@ -32,12 +33,13 @@ const AnimatedText = () => {
           height: 100%;
           position: absolute;
           transform-style: preserve-3d;
-          animation: ಠ_ಠ 20s infinite alternate ease-in-out 10.5s;
+          animation: ಠ_ಠ 30s infinite alternate ease-in-out 10.5s;
           animation-fill-mode: forwards;
           transform: rotateY(20deg) rotateX(13deg) translateZ(0);
         }
 
         .layer:after {
+          pointer-events: none;
           font: 80px/1 "Pacifico", "Kaushan Script", Futura, "Roboto", "Trebuchet MS", Helvetica, sans-serif;
           content: " Welcome to Lang Land !";
           white-space: pre;

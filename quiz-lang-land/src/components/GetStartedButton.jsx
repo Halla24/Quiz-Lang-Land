@@ -2,7 +2,7 @@ import React from 'react';
 
 const GetStartedButton = () => {
   return (
-    <div className='flex items-center justify-center '>
+    <div className='flex items-center justify-center  '>
       <div className='button w-40 h-16 bg-blue-500 rounded-lg cursor-pointer select-none
         active:translate-y-2 active:[box-shadow:0_0px_0_0_#1b6ff8,0_0px_0_0_#1b70f841]
         active:border-b-[0px]

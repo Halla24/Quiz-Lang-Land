@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
-import GlassCard from "../../components/GlassCard"; // Import the GlassCard component
+import GlassCard from "../../components/GlassCard"; 
 
 const About = () => {
   return (
